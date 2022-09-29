@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+/* navigation */
+
+.navigation {
+  background-color: #000000;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+}
+
+.navigation .nav li .active {
+  background-color: #ba8e25;
+}
+
+.navigation .nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.navigation .nav li:hover {
+  background-color: #4caf4f52;
+}
+
+
+.navigation .nav li a,
+Link {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+.navigation .nav .actived {
+  background-color: #4caf50;
+}
+
+/* films */
+.films-container {
+  padding-top: 4rem;
+}
+
+.films-container .card {
+  min-width: 30%;
+  max-width: 30%;
+  padding: 15px;
+  display: inline-block;
+  box-shadow: gray 5px 4px 9px 0px;
+  margin: 7px;
+}
+
+.films-container .card .thumbnail {
+  width: 100%;
+}
+
+.films-container .card .thumbnail img {
+  width: 100%;
+}
+
+.films-container .card .content p {
+  margin-bottom: 5px;
+}
+
+.films-container .card .content p a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 3px;
+}
+
+.films-container .card .content p a:hover {
+  background-color: gray;
+}
+
+/* Footer */
+.footer-container {
+  background-color: #000000;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Popup */
+.overlay {
+  position: fixed;
+  display: flex;
+  align-content: space-between;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.238);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.popup {
+  margin: 70px auto;
+  text-align: justify;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  max-width: 50%;
+  transition: all 5s ease-in-out;
+  position: fixed;
+  top: 0 auto;
+  overflow: auto;
+  max-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.popup img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #acacac;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay .popup .more-detail-btn{  
+  background-color: #4caf50;
+  margin-top: 1rem;
+  padding: 0.3rem 1rem;
+  border: solid 1px gray;
+  border-radius: 100px;
+}
+
+.overlay .popup .more-detail-btn a{
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .films-container .card {
+    min-width: 30%;
+    max-width: 80%;
+  }
+  .popup img{
+    width: 100%;
+  }
+}
+
+/* Detail */
+.detail-container {
+  padding-top: 3rem;
+}
+
+.detail-container .film-card .badge {
+  font-size: large;
+}
+
+.detail-container .film-card .film-tumb img {
+  max-width: 20rem;
+}
+
+
+/* Contact */
+.contact-container {
+  padding-top: 3rem;
+}
+
+.contact-container .contact-field {
+  padding: 5rem;
+  text-align: center;
+}
+
+.contact-container .contact-field .form form {
+  display: flex;
+  height: 22rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+}
+
+.contact-container .contact-field .form input {
+  display: block;
+  border-radius: 100px;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.contact-container .contact-field .form textarea {
+  width: 100%;
+  border-radius: 15px;
+  resize: vertical;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.contact-container .contact-field .form button {
+  display: block;
+  width: 20%;
+  border-radius: 100px;
+  background-color: #4caf50;
+  border: solid 1px #acacac;  
+  box-shadow: gray 0px 0px 9px 0px;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.contact-container .contact-field .form button:hover {
+  box-shadow: none;
+}
+
+@media (min-width: 640px) {
+  .contact-container .contact-field .form input {
+    max-width: 80%;
+  }
+
+  .contact-container .contact-field .form textarea {
+    max-width: 80%;
+  }
+
+  
+}
+
+
+
+/* News */
+.news-container{
+  padding-top: 3rem;
+}
+
+
+
+
+/* About */
+.about-container{
+  padding-top: 3rem;
+}
